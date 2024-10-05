@@ -1,0 +1,64 @@
+﻿@using CsvReaderApp.Models
+@model ContactDto 
+
+<div class="row">
+    <div class="col-md-8 mx-auto rounded border p-3">
+        <h2 class="text-center mb-5">Edit Contact</h2>
+        <form method="post" enctype="multipart/form-data">
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Id</label>
+                <div class="col-sm-8">
+                    <input class="form-control" value="@ViewData["ContactId"]" readonly>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Name</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Date of Birth</label>
+                <div class="col-sm-8">
+                    <input type="date" class="form-control" asp-for="DateOfBirth">
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Married</label>
+                <div class="col-sm-8">
+                    <input type="checkbox" class="form-check-input" asp-for="Married">
+                    <span asp-validation-for="Married" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Phone</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Phone">
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Salary</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Salary">
+                    <span asp-validation-for="Salary" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-8 offset-sm-4">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
